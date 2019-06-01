@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    	<title>Monitor</title>  
+ 
+      <style>
+
+            body, html {
+              width: 100%;
+              height: 100%;
+              padding: 0;margin: 0;
+              overflow: hidden;
+              position: relative;
+              
+          }
+
+          /*
+          * Stylisation du loader 
+          */
+          .loader-quart {
+            border-radius: 50px;
+            border: 6px solid rgba(255, 255, 255, 0.4);
+          }
+
+          .loader {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            top : 50%;
+            left : 50% ; 
+            transform: translate( -50% , -50% );
+            background: none !important;
+          }
+
+          .loader-quart:after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            bottom: -6px;
+            right: -6px;
+            border-radius: 50px;
+            border: 6px solid transparent;
+            border-top-color: #FFF;
+            -webkit-animation: spin 1s linear infinite;
+            -moz-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+          }
+
+          .content-loader{
+            position: absolute;
+            top: 0;left: 0;right: 0;bottom: 0;
+            background-color: rgba(62, 193, 211, 0.8);
+            z-index: 3000;
+          }
+          
+          /* Animations */
+          @-webkit-keyframes spin {
+            from {
+              -webkit-transform: rotate(0deg); }
+
+            to {
+              -webkit-transform: rotate(360deg); } }
+          @-moz-keyframes spin {
+            from {
+              -moz-transform: rotate(0deg); }
+
+            to {
+              -moz-transform: rotate(360deg); } }
+          @keyframes spin {
+            from {
+              -webkit-transform: rotate(0deg);
+              -moz-transform: rotate(0deg);
+              -ms-transform: rotate(0deg);
+              -o-transform: rotate(0deg);
+              transform: rotate(0deg); }
+
+            to {
+              -webkit-transform: rotate(360deg);
+              -moz-transform: rotate(360deg);
+              -ms-transform: rotate(360deg);
+              -o-transform: rotate(360deg);
+              transform: rotate(360deg); } }
+
+      </style>
+  	</head>
+  	<body>
+        <div id="principale-loader" class="content-loader">
+          <span class="loader loader-quart"></span>
+        </div>
+		    <div id="core"></div>
+
+        <style>
+          
+          /*
+          *   Stylisation du color de formulaire 
+          */
+
+          
+          .cont-app{
+              height: 100%;
+              width: 100%;
+              overflow: auto;
+              background-color: rgba(62, 193, 211, 0.8);
+          }
+
+          .col-form{
+              margin: 3rem 0rem;
+          }
+
+          .col-form-cont{
+              background-color: #FFF;
+              padding: 4rem 2rem;
+              border-radius: 0.2rem;
+              box-shadow: 0px 0px 10px rgba(0,0,0,0.1) ; 
+          }
+
+
+          /*
+          *   stylisation de tout les Inputs de l'applications 
+          */
+
+          .form-login{
+
+              margin-top: 2rem;
+
+          }
+
+          .cont-app .form-control {
+              color: #495057;
+              background-color: #EBEBEB;
+              border: 1px solid rgba(0,0,0,0);
+          }
+
+          .form-control:focus {
+              color: #495057;
+              background-color: #fff;
+              border-color: #80bdff;
+              outline: 0;
+              box-shadow: 0 0 0 0.2rem rgba(62, 193, 211, 0.25);
+          }
+
+          /* Stylisation des Icons de l'Input */
+
+          .cont-app .input-icon{
+          
+              position: absolute;
+              z-index: 300;
+              top: 0.4rem;
+              left: 0.75rem;
+          
+          }
+
+          .cont-app .input-icon-txt{
+              
+              padding-left: 2.5rem;
+              border-radius: 0.25rem !important; 
+
+          }
+
+          
+          /*
+          *   Stylisation des button primary
+          */
+
+          .cont-app .btn-primary{
+              background-color: #3EC1D3;
+              border-color: #2ba1b1;
+          }
+
+          .cont-app .btn-primary:hover {
+              color: #fff;
+              background-color: #31b2c3;
+              border-color: #2ba1b1;
+          }
+
+          .cont-app .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+              background-color: #2b9faf;
+              border-color: #2ba1b1;
+          }
+
+          .cont-app .btn-link{
+              color: #3EC1D3;
+          }
+
+          .cont-app .btn-link:hover{
+              color: #2b9faf;
+          }
+
+
+          /* écrasé les elements */
+          a {
+              color: #333333;
+          }
+
+        </style>
+  	</body>
+</html>
